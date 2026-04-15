@@ -29,6 +29,6 @@
     ".next/types/**/*.ts",
     ".next/dev/types/**/*.ts",
     "**/*.mts"
-  ],
+, "src/app/models/Appointment.ts", "src/app/models/Service.ts", "src/app/models/User.ts", "src/app/booking/page.jsx", "src/app/api/register/route.ts"  ],
   "exclude": ["node_modules"]
 }

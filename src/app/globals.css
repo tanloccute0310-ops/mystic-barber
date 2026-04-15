@@ -1,0 +1,50 @@
+/* Thiết lập nền đen cho toàn bộ website */
+body {
+  background-color: #121212 !important;
+  color: #E0E0E0 !important;
+}
+
+/* --- STYLE RIÊNG CHO NAVBAR --- */
+.mystic-nav {
+  background-color: #191919 !important; /* Màu xám đen, nổi bật nhẹ so với nền body */
+  border-bottom: 1px solid #B8860B; /* Đường viền vàng đồng mỏng ở đáy */
+}
+
+/* Chữ Logo */
+.mystic-brand {
+  color: #B8860B !important;
+  font-weight: 800;
+  letter-spacing: 2px; /* Chữ giãn ra cho sang trọng */
+  font-size: 1.5rem;
+}
+
+/* Các link menu (Trang chủ, Dịch vụ...) */
+.mystic-link {
+  color: #E0E0E0 !important;
+  text-transform: uppercase; /* Ép viết hoa toàn bộ */
+  font-size: 0.9rem;
+  letter-spacing: 1px;
+  margin: 0 12px;
+  transition: color 0.3s ease; /* Hiệu ứng chuyển màu mượt mà */
+}
+
+/* Khi di chuột vào link */
+.mystic-link:hover, .mystic-link.active {
+  color: #B8860B !important;
+}
+
+/* Nút bấm "Đặt lịch" nổi bật */
+.btn-mystic {
+  background-color: #B8860B !important;
+  color: #121212 !important;
+  font-weight: bold;
+  border: 1px solid #B8860B !important;
+  padding: 8px 24px;
+  transition: all 0.3s ease;
+}
+
+/* Khi di chuột vào nút Đặt lịch */
+.btn-mystic:hover {
+  background-color: transparent !important; /* Nền trong suốt */
+  color: #B8860B !important; /* Chữ vàng đồng */
+}
