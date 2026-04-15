@@ -4,18 +4,16 @@ import Category from '../../../models/Category';
 import { revalidatePath } from 'next/cache';
 
 // --- 1. CẬP NHẬT DANH MỤC (PUT) ---
-export async function PUT(request: Request, context: { params: { id: string } }) {
+export async function PUT(request: Request, context: { params: Promise<{ id: string }> }) {
   try {
     await connectDB();
     const { id } = await context.params; // Lấy ID từ URL
     const { name, description } = await request.json();
-
     const updatedCategory = await Category.findByIdAndUpdate(
       id,
       { name, description },
       { new: true, runValidators: true }
     );
-
     if (!updatedCategory) {
       return NextResponse.json({ error: 'Không tìm thấy danh mục' }, { status: 404 });
     }
@@ -33,7 +31,7 @@ export async function PUT(request: Request, context: { params: { id: string } })
 }
 
 // --- 2. XÓA DANH MỤC (DELETE) ---
-export async function DELETE(request: Request, context: { params: { id: string } }) {
+export async function DELETE(request: Request, context: { params: Promise<{ id: string }> }) {
   try {
     await connectDB();
     const { id } = await context.params;
